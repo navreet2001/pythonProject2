@@ -2,9 +2,8 @@ from bs4 import BeautifulSoup
 from urllib.request import Request, urlopen
 import re
 
-req1 = Request("https://www.indiegogo.com/individuals/23489031")
-req2 = Request("https://www.indiegogo.com/individuals/4590125")
-html_page = urlopen(req1, req2)
+req = Request("https://www.indiegogo.com/individuals/23489031")
+html_page = urlopen(req)
 
 
 soup = BeautifulSoup(html_page, "lxml")
